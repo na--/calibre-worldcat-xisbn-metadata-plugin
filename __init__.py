@@ -61,7 +61,7 @@ class WorldCatxISBN(Source):
 
         year = data.get("year", None)
         if year is not None:
-            mi.pubdate = datetime.date(int(year), 1, 1)
+            mi.pubdate = datetime.datetime(int(year), 1, 1)
 
         log.info("Final formatted result: %s" % mi)
         result_queue.put(mi)
